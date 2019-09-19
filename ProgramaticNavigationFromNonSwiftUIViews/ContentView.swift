@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var cameraState: CameraState
+    
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                cameraState.photo.map { hotdogPhoto in
+                    Image(uiImage: hotdogPhoto)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                
+                NavigationLink(destination: CameraView(cameraState: cameraState)) {
+                    Text("Take Photo")
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(cameraState: CameraState())
     }
 }

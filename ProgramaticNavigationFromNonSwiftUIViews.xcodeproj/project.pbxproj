@@ -14,6 +14,8 @@
 		DEE6F31A23332C8F0018CE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE6F31923332C8F0018CE07 /* Assets.xcassets */; };
 		DEE6F31D23332C8F0018CE07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE6F31C23332C8F0018CE07 /* Preview Assets.xcassets */; };
 		DEE6F32023332C8F0018CE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE6F31E23332C8F0018CE07 /* LaunchScreen.storyboard */; };
+		DEE6F32823332CBF0018CE07 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6F32723332CBF0018CE07 /* CameraView.swift */; };
+		DEE6F32A23332CCB0018CE07 /* CameraState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6F32923332CCB0018CE07 /* CameraState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DEE6F31C23332C8F0018CE07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DEE6F31F23332C8F0018CE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEE6F32123332C8F0018CE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE6F32723332CBF0018CE07 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		DEE6F32923332CCB0018CE07 /* CameraState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				DEE6F32123332C8F0018CE07 /* Info.plist */,
 				DEE6F31423332C8E0018CE07 /* ProgramaticNavigationFromNonSwiftUIViews.xcdatamodeld */,
 				DEE6F31B23332C8F0018CE07 /* Preview Content */,
+				DEE6F32723332CBF0018CE07 /* CameraView.swift */,
+				DEE6F32923332CCB0018CE07 /* CameraState.swift */,
 			);
 			path = ProgramaticNavigationFromNonSwiftUIViews;
 			sourceTree = "<group>";
@@ -149,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE6F32A23332CCB0018CE07 /* CameraState.swift in Sources */,
 				DEE6F31123332C8E0018CE07 /* AppDelegate.swift in Sources */,
 				DEE6F31623332C8E0018CE07 /* ProgramaticNavigationFromNonSwiftUIViews.xcdatamodeld in Sources */,
 				DEE6F31823332C8E0018CE07 /* ContentView.swift in Sources */,
+				DEE6F32823332CBF0018CE07 /* CameraView.swift in Sources */,
 				DEE6F31323332C8E0018CE07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
