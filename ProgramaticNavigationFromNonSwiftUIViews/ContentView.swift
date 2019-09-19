@@ -21,7 +21,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fill)
                 }
                 
-                NavigationLink(destination: CameraView(cameraState: cameraState)) {
+                NavigationLink(destination: DismissView(cameraState: cameraState)) {
                     Text("Take Photo")
                 }
             }

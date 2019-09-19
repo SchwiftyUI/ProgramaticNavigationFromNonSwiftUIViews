@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CameraView: UIViewControllerRepresentable {
     @ObservedObject var cameraState: CameraState
+    @ObservedObject var shouldDismiss: ShouldDismiss
     
     var coordinator: Coordinator!
 
@@ -41,10 +42,12 @@ struct CameraView: UIViewControllerRepresentable {
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             parent.cameraState.photo = nil
+            parent.shouldDismiss.dismiss = true
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             parent.cameraState.photo = info[.originalImage] as? UIImage
+            parent.shouldDismiss.dismiss = true
         }
     }
 }
@@ -52,7 +55,7 @@ struct CameraView: UIViewControllerRepresentable {
 #if DEBUG
 struct CameraView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraView(cameraState: CameraState())
+        CameraView(cameraState: CameraState(), shouldDismiss: ShouldDismiss())
     }
 }
 #endif
